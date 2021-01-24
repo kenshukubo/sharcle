@@ -1,0 +1,35 @@
+@import 'common/foundation/variables.scss';
+
+$btn-padding: 12px 28px;
+$btn-font-weight: 800;
+
+#registration-btn.disabled{
+  pointer-events: none;
+  border-color: #999;
+  color: #999;
+  &:hover{
+    color: #999;
+  } 
+}
+
+.square-btn{
+  border-radius: 4px;
+  min-width: 120px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  padding: $btn-padding;
+  border: 2px solid $main-color;
+  color: $main-color;
+  transition: .2s;
+  &:hover{
+    opacity: .9;
+    color: $main-color;
+  }
+  i.fa-angle-left{
+    margin-right: 8px;
+  }
+  i.fa-angle-right{
+    margin-left: 8px;
+  }
+}

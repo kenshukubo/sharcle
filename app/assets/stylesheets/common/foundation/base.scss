@@ -1,5 +1,25 @@
 @import 'common/foundation/variables.scss';
 
+html{
+  font-size: 62.5%;
+  height: 100%;
+}
+body{
+  height: 100%;
+  min-height: 80vh;
+  font-size: 14px;
+  margin: 0;
+  // font-size: 1.4rem;
+  position: relative;
+  color: $text-color;
+  font-family: $accent-font;
+  // background-color: #f0f2f5;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+footer{
+  margin-top: auto;
+}
 a {
   // font-size: 14px;
   text-decoration: none;
@@ -9,4 +29,12 @@ a {
     text-decoration: none;
     color: inherit;
   }
+}
+
+ul li{
+  list-style: none;
+}
+
+button, input, select, textarea{
+  outline: none;
 }

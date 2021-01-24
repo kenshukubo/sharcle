@@ -1,0 +1,106 @@
+@import 'common/foundation/variables.scss';
+
+.common-form{
+  label{
+    cursor: pointer;
+  }
+  select{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: $half-border-radius;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    font-size: $font-sm;
+    @media(max-width: $sm){
+      font-size: 16px;
+    }
+  }
+  input[type=text],
+  input[type=password],
+  input[type=email]{
+    background-color: $gray-bkg-color;
+    border-radius: $half-border-radius;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    @media(max-width: $sm){
+      font-size: 16px;
+    }
+  }
+  input[type=checkbox]{
+    display: inline-block;
+    width: auto;
+    & + label{
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
+  }
+  textarea{
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid $gray-bkg-color;
+    padding: 10px;
+    @media(max-width: $sm){
+      font-size: 16px;
+    }
+  }
+  input[type=submit]{
+    // margin-top: 20px;
+    padding: 8px 20px;
+  }
+  input[type=submit].inline-block-btn{
+    // margin-top: 20px;
+    // width: auto;
+    display: inline-block;
+    min-width: 160px;
+  }
+  input{
+    width: 100%;
+    display: block;
+    @media(max-width: $sm){
+      font-size: 16px;
+    }
+  }
+  select{
+    width: 100%;
+    padding-right: 40px;
+    display: block;
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, transparent, transparent);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    @media(max-width: $sm){
+      font-size: 16px;
+    }
+  }
+  .manga-form__group{
+    margin-bottom: 20px;
+  }
+  .manga-form__group--width_auto{
+    select{
+      width: auto;
+      @media(max-width: $sm){
+        font-size: 16px;
+      }
+    }
+  }
+  select.select--width_auto{
+    width: auto;
+    @media(max-width: $sm){
+      font-size: 16px;
+    }
+  }
+  .check-box-group{
+    display: flex;
+    align-items: center;
+
+  }
+}

@@ -22,3 +22,22 @@ $line-click-color: #00B300;
 $line-disable-color: #C6C6C6;
 $zoom-color: #519CFE;
 $main-box-shadow:  0 1.9px 2.5px rgba(0, 0, 0, 0.03), 0 5px 6.1px rgba(0, 0, 0, 0.03), 0 10.1px 11.4px rgba(0, 0, 0, 0.03), 0 19.2px 19.8px rgba(0, 0, 0, 0.022), 0 38.4px 34.8px rgba(0, 0, 0, 0.03), 0 101px 74px rgba(0, 0, 0, 0.03);
+
+// fonts
+// $regular-font: "ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+$regular-font: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif !important;
+$accent-font:  "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif !important;
+$logo-font: 'Averia Serif Libre', cursive;
+
+// font-sizes
+$font-xxl: 4.8rem;
+$font-xl: 3.4rem;
+$font-lg: 3.0rem;
+$font-md: 2.4rem;
+$font-rg: 1.6rem;
+$font-sm: 1.4rem;
+$font-xs: 1.2rem;
+
+// border-radius
+$common-border-radius: 4px;
+$half-border-radius: 4px;
