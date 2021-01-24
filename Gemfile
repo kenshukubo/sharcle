@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.7'
 
 # ここからが自分のGEM
 gem 'devise'
+gem 'omniauth', '1.9.1'
 gem 'dotenv-rails'
 gem 'carrierwave'
 gem 'mini_magick'

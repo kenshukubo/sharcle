@@ -1,0 +1,12 @@
+@import 'common/foundation/variables.scss';
+
+a {
+  // font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  &:hover{
+    text-decoration: none;
+    color: inherit;
+  }
+}

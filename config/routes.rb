@@ -1,3 +1,20 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  devise_for :users, controllers: {
+    passwords:          'users/passwords',
+    registrations:      'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    sessions:           'users/sessions',
+    confirmations:      "users/confirmations"
+  }
+
+  devise_scope :user do
+    authenticated :user do
+      root 'static_pages#home', as: :authenticated_root
+    end
+  end
+
+  root 'static_pages#home'
+  #未ログインユーザーの、上記以外のURLへのアクセスは全てトップページに飛ばす
+  get "*any_path", to: redirect { |p, req| '/' }
 end

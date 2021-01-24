@@ -1,0 +1,62 @@
+@import 'common/foundation/variables.scss';
+
+.header{
+  // height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.header__links{
+  display: flex;
+  align-items: center;
+  // @media(max-width: 567px){
+  //   display: none;
+  // }
+}
+
+.header__link-btn{
+  font-weight: 600;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.82);
+  border: 1px solid #000;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 8px;
+  white-space: nowrap;
+  @media(max-width: $sm){
+    padding: 8px 12px;
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 4px;
+  }
+  &:hover{
+    color: rgba(0, 0, 0, 0.82);
+    opacity: .8;
+  }
+  &--primary-fill{
+    background-color: $main-color;
+    border: 1px solid $main-color;;
+    color: #fff;
+    &:hover{
+      color: #fff;
+      opacity: .8;
+    }
+  }
+  &--primary{
+    border: 1px solid $main-color;
+    color: $main-color;
+    &:hover{
+      color: $main-color;
+      opacity: .8;
+    }
+  }
+}
