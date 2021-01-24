@@ -1,6 +1,8 @@
 <% if current_user %>
 <% else %>
   <header class="header">
+    <div class="header-left-wrapper">
+    </div>
     <div class="header__links">
       <%= link_to "ログイン", new_user_session_path, class:"header__link-btn header__link-btn--primary" %>
       <%= link_to "新規登録", new_user_registration_path, class:"header__link-btn header__link-btn--primary-fill" %>
