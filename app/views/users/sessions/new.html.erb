@@ -1,26 +1,42 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="common-modal__overlay-static">
+  <div class="common-modal" id="signup-modal">
+    <div class="common-modal__header">
+      <h2 class="common-modal__title">
+        ログイン
+      </h2>
+      <div class="common-modal__subtitle">
+        <%= link_to "新規登録はこちら", new_user_registration_path %>
+      </div>
     </div>
-  <% end %>
+    <div class="common-modal__body">
+      <div class="common-form">
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= render "users/shared/error_messages", resource: resource %>
+          <div class="field">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email",:placeholder => "example@gmail.com" %>
+          </div>
+          <div class="field">
+            <%= f.password_field :password, autocomplete: "new-password" ,:placeholder => "パスワード" %>
+          </div>
+          <% if devise_mapping.rememberable? %>
+            <div class="check-box-group">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me, "保存する" %>
+            </div>
+          <% end %>
+          <div class="common-modal__help-options">
+            <p>
+            <%= link_to "パスワードを忘れた", new_password_path(resource_name), class:"common-modal__help-option"  %>
+            </p>
+          </div>
+          <div class="actions">
+            <%= f.submit "ログインする", class:"square-btn" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="common-modal__footer">
 
-<%= render "users/shared/links" %>
+    </div>
+</div>

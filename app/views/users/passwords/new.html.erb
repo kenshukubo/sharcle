@@ -2,20 +2,19 @@
   <div class="common-modal" id="signup-modal">
     <div class="common-modal__header">
       <h2 class="common-modal__title">
-        確認メールを送信する
+        パスワードの更新
       </h2>
     </div>
     <div class="common-modal__body">
       <div class="common-form">
 
-        <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= form_for(resource, as: resource_name, url: user_password_path, html: { method: :post }) do |f| %>
           <%= render "users/shared/error_messages", resource: resource %>
           <div class="field">
-            <%= f.label :email %>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email",:placeholder => "example@gmail.jp" %>
           </div>
           <div class="actions" style="margin-top: 20px;">
-            <%= f.submit "ログインする", class:"square-btn" %>
+            <%= f.submit "送信する", class:"square-btn" %>
           </div>
         <% end %>
       </div>
