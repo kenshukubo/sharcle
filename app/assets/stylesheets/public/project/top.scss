@@ -2,6 +2,12 @@
 
 .top-articles{
   padding: 0 160px;
+  @media(max-width: $md){
+    padding: 0px 100px;
+  }
+  @media(max-width: $sm){
+    padding: 0px 40px;
+  }
 }
 
 .top-articles__item{
@@ -45,6 +51,9 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
   margin-bottom:4px;
+  @media(max-width: $sm){
+    display: none;
+  }
 }
 .top-articles__poster-name{
   font-size: 13px;
