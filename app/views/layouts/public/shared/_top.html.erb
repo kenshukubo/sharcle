@@ -1,8 +1,15 @@
 <div id="top">
   <div class="podsman-container">
     <div class="podsman-inner-bg--wide">
+      <div class="common-form">
+        <%= form_with url: articles_path, method: :post, local: true do |f| %>
+          <div class="field">
+            <%= f.text_field :url, class: "form-control", placeholder: "URL記入してシェア"%>
+          </div>
+        <% end %>
+      </div>
       <% @articles.find_each do |article| %>
-        <div class="top-articles">
+        <div class="top-articles" style="margin-top:30px;">
           <%= link_to article.url, target: "_blank", rel: "nooponer", class:"top-articles__item" do %>
             <div class="top-articles__img-wrapper">
               <% if article.og_image.present? %>
