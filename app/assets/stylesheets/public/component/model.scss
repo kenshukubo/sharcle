@@ -43,12 +43,6 @@
   }
 }
 
-.common-modal__divider{
-  font-size: $font-xs;
-  color: #999;
-  padding: 12px 0;
-}
-
 .common-modal__overlay-static{
   text-align: left;
   display: flex;
@@ -71,5 +65,14 @@
   a{
     font-size: 12px;
     border-bottom: 1px solid #999;
+  }
+}
+
+.common-modal__help-options{
+  padding: 20px 0 0;
+  font-size: $font-sm;
+  p{
+    margin-bottom: 8px;
+    color: #999;
   }
 }

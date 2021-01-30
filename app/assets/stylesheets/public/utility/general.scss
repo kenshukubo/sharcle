@@ -1,5 +1,39 @@
 @import 'common/foundation/variables.scss';
 
+.flash{
+  text-align: center;
+  margin-bottom: 0!important;
+  font-weight: 600;
+}
+.alert{
+  text-align: center;
+  margin-bottom: 0!important;
+  font-weight: 600;
+}
+
+.notice{
+  position: relative;
+  padding: .75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  font-weight: 600;
+  @media(max-width: $md){
+    text-align: left;
+  }
+}
+
+.alert-notice{
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+.alert-alert{
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
 .common-loading-overlay{
   position: fixed;
   top: 0;

@@ -6,6 +6,15 @@
 
   <body>
     <%= render "shared/public/header" %>
+    <% if flash.any? %>
+        <% flash.each do |key, value| %>
+          <div class="flash alert-<%= key %>">
+            <%= content_tag(:div, value, class: "#{key}") %>
+          </div>
+        <% end %>
+    <% else %>
+      <div id="ie-alert__wrapper"></div>
+    <% end %>
 
     <main class="main">
       <%= yield %>

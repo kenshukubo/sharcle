@@ -1,0 +1,28 @@
+@import 'common/foundation/variables.scss';
+
+.podsman-container{
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.podsman-inner-bg{
+  border-radius: 20px;
+  padding: 32px 8px;
+  margin-bottom: 40px;
+  @media(max-width: $sm){
+      padding: 20px 4px; 
+  }
+  &--mb_20{
+      margin-bottom: 20px;
+  }
+  &--mb_40{
+      margin-bottom: 40px;
+  }
+  &--mb_60{
+      margin-bottom: 60px;
+  }
+  &--white{
+      background-color: #fff;
+  }
+}
