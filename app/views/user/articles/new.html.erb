@@ -1,0 +1,17 @@
+<div class="podsman-container">
+  <div class="podsman-inner-bg">
+    <h4 class="section__title-mini">
+      URLを記入してください
+    </h4>
+    <div class="common-modal__body">
+      <div class="common-form">
+        <%= form_with url: articles_path, method: :post, local: true do |f| %>
+          <div class="field">
+            <%= f.text_field :url, class: "form-control", placeholder: "https://"%>
+          </div>
+          <%= f.submit "投稿", class:"square-btn" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

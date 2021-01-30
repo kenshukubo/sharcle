@@ -4,7 +4,8 @@
       <%=link_to "Sharcle", root_path %>
     </div>
     <div class="header__links">
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to "投稿", new_articles_path, class:"header__link-btn" %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"header__link-btn" %>
     </div>
   </header>
 <% else %>

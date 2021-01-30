@@ -8,6 +8,12 @@ Rails.application.routes.draw do
     confirmations:      "users/confirmations"
   }
 
+  authenticated :user do
+    scope module: :user do
+      resource :articles, only: [:new, :create]
+    end
+  end
+
   devise_scope :user do
     authenticated :user do
       root 'static_pages#home', as: :authenticated_root
