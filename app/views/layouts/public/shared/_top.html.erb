@@ -1,7 +1,27 @@
 <div id="top">
   <div class="podsman-container">
-    <div class="podsman-inner-bg">
-      
+    <div class="podsman-inner-bg--wide">
+      <% @articles.find_each do |article| %>
+        <%=link_to article.og_url do %>
+          <div class="top-articles">
+            <div class="top-articles__img-wrapper">
+              <% if article.og_image.present? %>
+                <%=image_tag article.og_image, style:"width:450px;" %>
+              <% end %>
+            </div>
+            <div class="top-articles__title-wrapper">
+              <span class="top-articles__title">
+                <%=article.og_title%>
+              </span>
+              <% if article.og_description.present? %>
+                <span class="top-articles__description">
+                  <%=article.og_description%>
+                </span>
+              <% end %>
+            </div>
+          </div>
+        <% end %>  
+      <% end %>
     </div>
   </div>
 </div>

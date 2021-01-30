@@ -26,3 +26,23 @@
       background-color: #fff;
   }
 }
+.podsman-inner-bg--wide{
+    // background-color: #f6f6f6;
+    border-radius: 20px;
+    padding: 40px 8px;
+    @media(max-width: $sm){
+        padding: 20px 4px; 
+    }
+    &--mb_20{
+        margin-bottom: 20px;
+    }
+    &--mb_40{
+        margin-bottom: 40px;
+    }
+    &--mb_60{
+        margin-bottom: 60px;
+    }
+    &--white{
+        background-color: #fff;
+    }
+}
