@@ -2,28 +2,32 @@
   <div class="podsman-container">
     <div class="podsman-inner-bg--wide">
       <% @articles.find_each do |article| %>
-        <%=link_to article.og_url do %>
-          <div class="top-articles">
+        <div class="top-articles">
+          <%= link_to article.url, target: "_blank", rel: "nooponer", class:"top-articles__item" do %>
             <div class="top-articles__img-wrapper">
               <% if article.og_image.present? %>
                 <%=image_tag article.og_image, style:"width:450px;" %>
+              <% else %>
+                <span class="top-articles__url">
+                  <%= article.url %>
+                </span>
               <% end %>
             </div>
             <div class="top-articles__title-wrapper">
               <span class="top-articles__title">
-                <%=article.og_title%>
+                <%= article.og_title %>
               </span>
               <% if article.og_description.present? %>
-                <span class="top-articles__description" style="margin-bottom:4px;">
-                  <%=article.og_description%>
+                <span class="top-articles__description">
+                  <%= article.og_description %>
                 </span>
               <% end %>
               <span class="top-articles__poster-name">
-                From : <%= article.user.user_profile.name %>
+                <%= article.user.user_profile.name %> <span style="font-weight:500;">checked✅<span>
               </span>
             </div>
-          </div>
-        <% end %>  
+          <% end %>
+        </div>  
       <% end %>
     </div>
   </div>

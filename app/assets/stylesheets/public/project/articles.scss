@@ -1,16 +1,22 @@
 @import 'common/foundation/variables.scss';
 
 .top-articles{
+  padding: 0 160px;
+}
+
+.top-articles__item{
   display: flex;
   flex-direction: column;
-  padding: 0 160px;
-
+  margin-bottom: 16px;
 }
 
 .top-articles__img-wrapper{
   display: flex;
   justify-content: center;
   overflow: hidden;
+  border-top: solid 1px #eee;
+  border-left: solid 1px #eee;
+  border-right: solid 1px #eee;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
@@ -38,8 +44,18 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  margin-bottom:4px;
 }
 .top-articles__poster-name{
   font-size: 13px;
   font-weight: 600;
+}
+
+.top-articles__url{
+  width: 100%;
+  padding: 10px;
+  color: rgb(27, 149, 224);
+  &:hover{
+    text-decoration: underline;
+  }
 }

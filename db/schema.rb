@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_01_30_064903) do
     t.string "og_title"
     t.text "og_image"
     t.string "og_description"
-    t.text "og_url"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
