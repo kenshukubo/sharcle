@@ -10,7 +10,7 @@
           <% end %>
         </div>
       <% end %>
-      <% @articles.find_each do |article| %>
+      <% @articles.each do |article| %>
         <div class="top-articles" style="margin-top:30px;">
           <%= link_to article.url, target: "_blank", rel: "nooponer", class:"top-articles__item" do %>
             <div class="top-articles__img-wrapper">
