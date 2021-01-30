@@ -38,3 +38,11 @@ ul li{
 button, input, select, textarea{
   outline: none;
 }
+
+nav.pagination {
+  display: none;
+}
+
+.scroll-list {
+  padding: 0;
+}

@@ -10,34 +10,37 @@
           <% end %>
         </div>
       <% end %>
-      <% @articles.each do |article| %>
-        <div class="top-articles" style="margin-top:30px;">
-          <%= link_to article.url, target: "_blank", rel: "nooponer", class:"top-articles__item" do %>
-            <div class="top-articles__img-wrapper">
-              <% if article.og_image.present? %>
-                <%=image_tag article.og_image, style:"width:105%;" %>
-              <% else %>
-                <span class="top-articles__url">
-                  <%= article.url %>
+      <div class="scroll-list jscroll">
+        <% @articles.each do |article| %>
+          <div class="top-articles" style="margin-top:30px;">
+            <%= link_to article.url, target: "_blank", rel: "nooponer", class:"top-articles__item" do %>
+              <div class="top-articles__img-wrapper">
+                <% if article.og_image.present? %>
+                  <%=image_tag article.og_image, style:"width:105%;" %>
+                <% else %>
+                  <span class="top-articles__url">
+                    <%= article.url %>
+                  </span>
+                <% end %>
+              </div>
+              <div class="top-articles__title-wrapper">
+                <span class="top-articles__title">
+                  <%= article.og_title %>
                 </span>
-              <% end %>
-            </div>
-            <div class="top-articles__title-wrapper">
-              <span class="top-articles__title">
-                <%= article.og_title %>
-              </span>
-              <% if article.og_description.present? %>
-                <span class="top-articles__description">
-                  <%= article.og_description %>
+                <% if article.og_description.present? %>
+                  <span class="top-articles__description">
+                    <%= article.og_description %>
+                  </span>
+                <% end %>
+                <span class="top-articles__poster-name">
+                  <%= article.user.user_profile.name %> <span style="font-weight:500;">posted✅<span>
                 </span>
-              <% end %>
-              <span class="top-articles__poster-name">
-                <%= article.user.user_profile.name %> <span style="font-weight:500;">posted✅<span>
-              </span>
-            </div>
-          <% end %>
-        </div>  
-      <% end %>
+              </div>
+            <% end %>
+          </div>  
+        <% end %>
+      </div>
+      <%= paginate @articles %>
     </div>
   </div>
 </div>
