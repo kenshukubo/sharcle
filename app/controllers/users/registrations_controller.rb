@@ -17,7 +17,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     begin
       ActiveRecord::Base.transaction do
         @user.build_user_profile(name: "ゲストさん",identified_char: SecureRandom.uuid)
-        @user.build_user_notification
         @user.save!
       end
     rescue => error
