@@ -16,7 +16,7 @@
             <%= link_to article.url, target: "_blank", rel: "nooponer", class:"top-articles__item" do %>
               <div class="top-articles__img-wrapper">
                 <% if article.og_image.present? %>
-                  <%=image_tag article.og_image, style:"width:105%;" %>
+                  <%=image_tag article.og_image, style:"width:105%; max-height:400px;" %>
                 <% else %>
                   <span class="top-articles__url">
                     <%= article.url %>
