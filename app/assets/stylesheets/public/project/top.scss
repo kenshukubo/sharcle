@@ -64,6 +64,9 @@
   width: 100%;
   padding: 10px;
   color: rgb(27, 149, 224);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   &:hover{
     text-decoration: underline;
   }
