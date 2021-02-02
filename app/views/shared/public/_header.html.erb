@@ -1,10 +1,26 @@
 <% if current_user %>
-  <header class="header">
+  <header class="header header--user">
     <div class="header-left-wrapper">
       <%=link_to "俺のメモ", root_path %>
     </div>
+
     <div class="header__links">
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"header__link-btn" %>
+      <!-- ハンバーガーアイコン -->
+      <button type="button" class="drawer-toggle drawer-hamburger">
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+
+      <!-- 以下ドロワー内の情報 -->
+      <nav class="drawer-nav" role="navigation">
+        <div class="header__user-menu">
+          <div class="header__user-menu-btn">
+          </div>
+          <div class="header__user-menu-items-inner">
+            <%= link_to "プロフィール設定", edit_user_profile_path, class:"header__user-menu-item" %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"header__user-menu-item" %>
+          </div>
+        </div>
+      </nav>
     </div>
   </header>
 <% else %>
@@ -18,3 +34,9 @@
     </div>
   </header>
 <% end %>
+
+<script>
+  $(document).ready(function() {
+    $('.drawer').drawer();
+  });
+</script>

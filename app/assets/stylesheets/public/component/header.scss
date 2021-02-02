@@ -13,10 +13,17 @@
   border-bottom: 1px solid #eee;
 }
 
+.header--user{
+  padding-right: 56px;
+  @media(max-width: $sm){
+    padding-right: 44px;
+  }
+}
+
 .header-left-wrapper{
   display: flex;
   align-items: center;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 800;
 }
 

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     scope module: :user do
+      resource :user_profile, only: [:edit, :update]
       resource :articles, only: [:new, :create]
     end
   end
