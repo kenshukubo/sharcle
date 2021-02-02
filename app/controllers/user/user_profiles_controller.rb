@@ -1,4 +1,4 @@
-class User::UserProfilesController < User::ApplicationController
+class User::UserProfilesController < ApplicationController
   before_action :set_user_profile, only: [:show, :edit, :update]
   # GET /user_profiles/1/edit
   def edit

@@ -1,0 +1,17 @@
+<div class="podsman-container">
+  <div class="podsman-inner-bg">
+    <h4 class="section__title-mini">
+      ユーザー名を記入してください
+    </h4>
+    <div class="common-modal__body">
+      <div class="common-form">
+        <%= form_with(model: @user ,url: user_profile_path, method: :put,local: true) do |f| %>
+          <div class="field">
+            <%= f.text_field :name, class: "form-control", placeholder: "ここにあなたの名前を書いてください"%>
+          </div>
+          <%= f.submit "更新", class:"square-btn", style:"margin-top:20px;" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
