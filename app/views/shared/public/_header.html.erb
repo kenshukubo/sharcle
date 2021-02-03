@@ -14,6 +14,9 @@
       <nav class="drawer-nav" role="navigation">
         <div class="header__user-menu">
           <div class="header__user-menu-btn">
+            <div class="header__user-menu-userinfo">
+              <span><%= current_user.user_profile.name %></span>
+            </div>
           </div>
           <div class="header__user-menu-items-inner">
             <%= link_to "プロフィール設定", edit_user_profile_path, class:"header__user-menu-item" %>

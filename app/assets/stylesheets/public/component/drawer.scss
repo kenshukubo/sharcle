@@ -55,6 +55,13 @@ button.drawer-toggle.drawer-hamburger{
   border-bottom: 1px solid #eee;
 }
 
+.header__user-menu-userinfo{
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
 .header__user-menu-items-inner{
   display: flex;
   flex-direction: column;
