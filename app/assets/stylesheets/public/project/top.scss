@@ -25,6 +25,10 @@
   border-right: solid 1px #eee;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  max-height: 320px;
+  @media(max-width: $sm){
+    max-height: 240px;
+  }
 }
 
 .top-articles__title-wrapper{
@@ -41,7 +45,7 @@
   color: $text-color;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 .top-articles__description{
