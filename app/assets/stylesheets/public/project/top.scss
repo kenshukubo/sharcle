@@ -42,12 +42,14 @@
 }
 
 .top-articles__title{
-  font-size: 14px;
   color: $text-color;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  @media(max-width: $sm){
+    font-size: 14px;
+  }
 }
 .top-articles__description{
   color: $line-disable-color;
