@@ -21,6 +21,13 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api, format: 'json' do
+    namespace :v1 do
+      resource  :stripe_checkout_session, only: [:create]
+      resource  :stripe_webhook, only: [:create]
+    end
+  end
+
   root 'static_pages#home'
   #未ログインユーザーの、上記以外のURLへのアクセスは全てトップページに飛ばす
   get "*any_path", to: redirect { |p, req| '/' }
