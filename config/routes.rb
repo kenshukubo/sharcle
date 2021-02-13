@@ -21,6 +21,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    resources :articles, only: [:index, :create, :update]
+  end
+
   root 'static_pages#home'
   #未ログインユーザーの、上記以外のURLへのアクセスは全てトップページに飛ばす
   get "*any_path", to: redirect { |p, req| '/' }
